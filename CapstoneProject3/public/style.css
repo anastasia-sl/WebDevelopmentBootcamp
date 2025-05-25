@@ -1,0 +1,34 @@
+body {
+  font-family: sans-serif;
+  margin: 40px;
+  background: #f2f2f2;
+  color: #333;
+}
+
+h1, h2 {
+  color: #444;
+}
+
+a {
+  margin-right: 10px;
+}
+
+textarea, input[type="text"] {
+  width: 100%;
+  margin: 10px 0;
+}
+
+button {
+  background: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.post {
+  background: white;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
