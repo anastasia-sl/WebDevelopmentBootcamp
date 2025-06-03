@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Book Notes</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<h1>📚 My Book Notes</h1>
+<a href="/add">+ Add Book</a>
+<div class="sort">
+    Sort by:
+    <a href="/?sort=rating">Rating</a> |
+    <a href="/?sort=read_date">Recency</a> |
+    <a href="/?sort=title">Title</a>
+</div>
+<% books.forEach(book => { %>
+    <div class="book">
+        <% if (book.cover_id) { %>
+            <img src="https://covers.openlibrary.org/b/id/<%= book.cover_id %>-M.jpg" alt="<%= book.title %>">
+        <% } %>
+        <h2><%= book.title %></h2>
+        <p><strong>Author:</strong> <%= book.author %></p>
+        <p><strong>Rating:</strong> <%= book.rating %></p>
+        <p><strong>Notes:</strong> <%= book.notes %></p>
+        <p><strong>Read on:</strong> <%= book.read_date %></p>
+        <a href="/edit/<%= book.id %>">Edit</a>
+        <form action="/delete/<%= book.id %>" method="POST">
+            <button type="submit">Delete</button>
+        </form>
+    </div>
+<% }) %>
+</body>
+</html>

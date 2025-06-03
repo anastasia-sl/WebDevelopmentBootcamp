@@ -1,0 +1,41 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+h1 {
+  color: #005b96;
+}
+
+input, textarea, button {
+  margin: 10px 0;
+  padding: 8px;
+  width: 100%;
+  max-width: 500px;
+  box-sizing: border-box;
+}
+
+.book {
+  background: white;
+  padding: 15px;
+  margin: 20px 0;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+img {
+  max-width: 150px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.sort, a {
+  margin: 10px 0;
+  display: inline-block;
+}
+
+form {
+  margin-bottom: 15px;
+}

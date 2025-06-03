@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Cocktail Recipe</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<h1>🍸 Random Cocktail Recipe</h1>
+
+<form action="/" method="GET">
+    <button type="submit">Get Cocktail</button>
+</form>
+
+<% if (cocktail) { %>
+    <div class="cocktail">
+        <h2><%= cocktail.name %></h2>
+        <img src="<%= cocktail.image %>" alt="<%= cocktail.name %>">
+        <p><strong>Category:</strong> <%= cocktail.category %></p>
+        <p><strong>Instructions:</strong> <%= cocktail.instructions %></p>
+    </div>
+<% } else { %>
+    <p>Click the button to get a random cocktail recipe!</p>
+<% } %>
+</body>
+</html>
